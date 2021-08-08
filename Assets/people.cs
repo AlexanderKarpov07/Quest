@@ -1,24 +1,35 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class people : MonoBehaviour
 {
-    private int speed = 10;
+
+    private int a, b;
+    public TextMesh text;
+    public GameObject key;
+    
     void Start()
     {
-        
+        a = Random.Range(0, 5);
+        b = Random.Range(0, 5);
+        text.text = a + " + " + b;
     }
-    
-    void Update()
+
+    private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.W))
+        int res;
+        if (int.TryParse(Input.inputString, out res))
         {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            if (a + b == res)
+            {
+                var o = Instantiate(key, Vector3.one, Quaternion.identity);
+                o.transform.position = new Vector3(890, 2, 384);
+                o.transform.rotation = Quaternion.Euler(90,0,0);
+            }
         }
     }
+
 }
