@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class door : MonoBehaviour
+public class Door : MonoBehaviour
 {
     [SerializeField]
     private float openDoor;
     [SerializeField]
     private float closeDoor;
+
+    public bool isOpen;
+    public bool isLocked;
+    public int id;
+
+    [SerializeField] 
+    private float speed = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +24,25 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Slerp(Transform);
+        if (isOpen)
+        {
+            OpenDoor();
+        }
+        else
+        {
+            CloseDoor();
+        }
+    }
+
+    void OpenDoor()
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation,
+            Quaternion.Euler(transform.rotation.x, openDoor, transform.rotation.z), speed * Time.deltaTime);
+    }
+
+    void CloseDoor()
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation,
+            Quaternion.Euler(transform.rotation.x, closeDoor, transform.rotation.z), speed * Time.deltaTime);
     }
 }

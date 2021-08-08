@@ -900,7 +900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 161402249}
-  m_RootOrder: 109
+  m_RootOrder: 108
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &95116744 stripped
 Transform:
@@ -1397,6 +1397,7 @@ Transform:
   - {fileID: 2118381619}
   - {fileID: 2059024115}
   - {fileID: 1642592926}
+  - {fileID: 1308730298}
   - {fileID: 371312364}
   - {fileID: 1779994980}
   - {fileID: 430352802}
@@ -1404,7 +1405,6 @@ Transform:
   - {fileID: 803968442}
   - {fileID: 2046701361}
   - {fileID: 1483717021}
-  - {fileID: 1308730298}
   - {fileID: 335513181}
   - {fileID: 1137856934}
   - {fileID: 1110691696}
@@ -1413,8 +1413,9 @@ Transform:
   - {fileID: 37348269}
   - {fileID: 995990502}
   - {fileID: 1315398452}
-  - {fileID: 386352377}
   - {fileID: 89444403}
+  - {fileID: 386352377}
+  - {fileID: 1221500961}
   - {fileID: 1792513031}
   - {fileID: 563507070}
   - {fileID: 915777276}
@@ -1423,7 +1424,6 @@ Transform:
   - {fileID: 634884765}
   - {fileID: 95116744}
   - {fileID: 594031571}
-  - {fileID: 1221500961}
   - {fileID: 1301579794}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -4275,6 +4275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openDoor: -17
   closeDoor: -90
+  isOpen: 0
+  speed: 1
 --- !u!4 &610940978
 Transform:
   m_ObjectHideFlags: 0
@@ -4632,11 +4634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 103.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 422.79996
+      value: 316.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4677,6 +4679,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0186
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_WalkSpeed
@@ -7389,7 +7395,7 @@ Transform:
   m_LocalScale: {x: 300, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 161402249}
-  m_RootOrder: 118
+  m_RootOrder: 110
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233678835
 GameObject:
@@ -8066,7 +8072,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 161402249}
-  m_RootOrder: 99
+  m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315398450
 GameObject:
